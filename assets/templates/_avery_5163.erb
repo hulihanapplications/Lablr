@@ -1,0 +1,41 @@
+<% 
+	options ||= Hash.new
+	options[:cell_width] 			||= 320
+	options[:cell_height] 			||= 172
+ 	options[:spacer_center_width] 	||= 15
+	options[:title_1] 				||= ""
+	options[:title_2] 				||= ""
+	options[:title_3] 				||= ""
+	options[:notes_1] 				||= ""
+	options[:notes_2] 				||= ""
+	options[:notes_3] 				||= ""
+	options[:img] 					||= ""
+%>
+<div class="sheet">
+	<table <%= self.style[:border] ? "border=1" : "border=0" %> align=center>
+		<% for i in (0..4) %>
+			<tr>
+				<!--
+				<td width=9>
+					&nbsp;
+				</td>
+				-->
+				<td <%= "width=#{options[:cell_width]} height=#{options[:cell_height]}" %> valign=top>
+					<%#= "#{options[:cell_width]}x#{options[:cell_height]}" %>
+					<%= self.content %>
+				</td>
+				<td <%= "width=#{options[:spacer_center_width]}" %>>
+					&nbsp;
+				</td>
+				<td <%= "width=#{options[:cell_width]} height=#{options[:cell_height]}" %> valign=top>
+					<%= self.content %>
+				</td>
+				<!--
+				<td width=9>
+					&nbsp;
+				</td>				
+				-->
+			</tr>
+		<% end %>
+	</table>	
+</div>
