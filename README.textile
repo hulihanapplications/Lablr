@@ -17,14 +17,10 @@ sudo apt-get install
 </pre> 
 
 Then install the htmldoc gem:
-<pre>
-sudo gem install htmldoc
-</pre> 
+<pre>sudo gem install htmldoc</pre> 
 
 h2. Installation
-<pre>
-gem install Lablr
-</pre>
+<pre>gem install Lablr</pre>
 
 h2. Usage
 
@@ -34,4 +30,5 @@ Lablr.generate_labels(:template => :avery_5163, :format => :pdf, :content => "Te
 
 # Generate PDF and write to file
 Lablr.generate_labels(:template => :avery_5163, :format => :pdf, :content => "Test Label!", :to_file => "x.pdf")
+</pre>
 
