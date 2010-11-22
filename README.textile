@@ -1,0 +1,37 @@
+h1. Lablr
+
+Lablr is a  Ruby Gem for generating printable labels in a variety of formats(pdf, html, etc.) and templates. 
+
+h2. Supported Label Templates
+
+The following templates are supported by Lablr:
+
+* Avery 5163/5963
+
+h2. Requirements
+
+Lablr uses HTMLDOC and the htmldoc gem to generate pdf files. You need to install HTMLDOC like so:
+
+<pre>
+sudo apt-get install
+</pre> 
+
+Then install the htmldoc gem:
+<pre>
+sudo gem install htmldoc
+</pre> 
+
+h2. Installation
+<pre>
+gem install Lablr
+</pre>
+
+h2. Usage
+
+<pre>
+# Generate PDF Label Sheet 
+Lablr.generate_labels(:template => :avery_5163, :format => :pdf, :content => "Test Label!")
+
+# Generate PDF and write to file
+Lablr.generate_labels(:template => :avery_5163, :format => :pdf, :content => "Test Label!", :to_file => "x.pdf")
+
