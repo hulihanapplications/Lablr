@@ -12,7 +12,7 @@
 	options[:img] 					||= ""
 %>
 <div class="sheet">
-	<table <%= self.style[:border] ? "border=1" : "border=0" %> align=center>
+	<table <%= @style.borders ? "border=1" : "border=0" %> align=center>
 		<% for i in (0..4) %>
 			<tr>
 				<!--

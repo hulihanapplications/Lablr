@@ -20,7 +20,7 @@ Then install the htmldoc gem:
 <pre>sudo gem install htmldoc</pre> 
 
 h2. Installation
-<pre>gem install Lablr</pre>
+<pre>gem install lablr</pre>
 
 h2. Usage
 
