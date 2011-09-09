@@ -1,14 +1,9 @@
-GIT
-  remote: git://github.com/hulihanapplications/htmldoc.git
-  revision: 53008085efdf9b5f2b1e33412e821409af224f0e
-  specs:
-    htmldoc (0.0.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
     diff-lcs (1.1.3)
     git (1.2.5)
+    htmldoc (0.2.3)
     jeweler (1.6.4)
       bundler (~> 1.0)
       git (>= 1.2.5)
@@ -30,7 +25,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.0.0)
-  htmldoc (= 0.0.0)!
+  htmldoc
   jeweler (~> 1.6.4)
   rcov
   rspec
