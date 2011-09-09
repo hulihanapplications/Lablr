@@ -6,7 +6,7 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 
-gem "htmldoc" # require rubygems htmldoc to install native gem, even though lablr uses a modified htmldoc in vendor/gems    
+gem "htmldoc-hulihanapplications" # require rubygems htmldoc to install native gem, even though lablr uses a modified htmldoc in vendor/gems    
 #gem "htmldoc", "0.0.0", :git => "git://github.com/hulihanapplications/htmldoc.git"#, ">= 0.2.3"
 
 group :development do

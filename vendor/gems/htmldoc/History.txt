@@ -1,0 +1,20 @@
+0.2.3
+* The htmldoc command sometimes uses \r in the output. [Jon Wood]
+
+0.2.2
+* Move source code to GitHub: http://github.com/craigw/htmldoc
+* Strings that have linebreaks in are probably not URLs.
+* If a string has a line starting what matches /https?:\/\/ it's not an 
+  URL, it's a string. [Tim Peters <http://rubyforge.org/users/tcp>]
+
+0.2.1
+* Fixed a bug in set_option where the value false would be seen as nil instead of :no
+
+0.2.0
+* Improved the way results are reported
+* Added information about errors generated in the course of execution
+* Refactored a couple of internal methods
+* Improved the tests and documentation
+
+0.1.0
+* Initial release
