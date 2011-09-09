@@ -1,9 +1,0 @@
-README.textile
-Rakefile
-assets/layouts/label.html.erb
-assets/templates/_avery_5163.erb
-init.rb
-lablr-0.0.1.gemspec
-lib/lablr.rb
-test.rb
-Manifest

@@ -57,7 +57,6 @@ module Lablr
     lablr_template = Lablr::Template.new(:name => options[:template], :content => options[:content], :style => TemplateStyle.new(options[:style]))
     rendered_template = lablr_template.erb.result(lablr_template.getBinding) # render erb template
     
-    #puts data
     if options[:format] == :pdf
       data = Lablr.render_to_pdf(rendered_template)
     elsif options[:format] == :html
@@ -66,7 +65,8 @@ module Lablr
     
     #puts rendered_template
     if options[:to_file] # write to file
-      file = File.basename(options[:to_file], "." + options[:format].to_s) + "." + options[:format].to_s
+      filename = File.basename(options[:to_file], "." + options[:format].to_s) + "." + options[:format].to_s
+      file = File.join(File.dirname(options[:to_file]), filename)
       File.open(file, "w"){|f| f.write(data)}
       return "Labels written to #{File.basename(file)}"
     else # return data      
@@ -78,13 +78,13 @@ module Lablr
 
  def self.render_to_pdf(html)  # create a pdf
   #data = render_to_string(options)
-  pdf = PDF::HTMLDoc.new
+  pdf = ::PDF::HTMLDoc.new
   pdf.set_option :bodycolor, :white
   pdf.set_option :toc, false
   pdf.set_option :portrait, true
   pdf.set_option :links, false
   pdf.set_option :webpage, true
-  pdf.set_option :top, '0cm'
+  #pdf.set_option :top, '0cm'
   pdf.set_option :left, '0cm'
   pdf.set_option :right, '0cm'
   pdf.set_option :bottom, '0cm'
@@ -93,13 +93,9 @@ module Lablr
   pdf.generate
  end
 
-  module VERSION #:nodoc:
-    MAJOR = 0
-    MINOR = 0
-    TINY  = 1
-
-    STRING = [MAJOR, MINOR, TINY].join(".")
-  end
+ module VERSION #:nodoc:
+   File.read(File.expand_path("../../VERSION", __FILE__))
+ end
 
 
 end
